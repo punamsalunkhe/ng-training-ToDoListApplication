@@ -1,0 +1,208 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  padding: 50px 15px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.task-container {
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  gap: 40px;
+}
+
+button:first-child {
+  background-color: #4CAF50;
+}
+
+.editInfo {
+  background-color: #4CAF50;
+}
+
+.delInfo {
+  background-color: #ff0000;
+}
+
+button:first-child:hover {
+  background-color: #45a049;
+}
+
+button {
+  background-color: #2196F3;
+}
+
+.refresh-button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+
+.delete-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.delete-task {
+
+  border: 1px solid #ff0000;
+  border-radius: 5px;
+  padding: 20px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.delete-task p {
+  margin: 0 0 15px;
+}
+
+.delete-task button {
+  margin-right: 10px;
+  background-color: red;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.pagination span {
+  margin: 0 10px;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 12px;
+}
+
+
+
+button:disabled {
+  background-color: #ccc;
+
+}
+
+.pagination button.active {
+  background-color: #000;
+  color: white;
+  font-weight: bold;
+}
+
+.totalCount {
+  margin-top: 5px;
+  padding: 10px 0;
+}
+
+.errorMsg {
+  display: inline-block;
+  color: #ff0000;
+  margin: 5px 0 8px;
+  float: left;
+  font-size: 12px;
+}
+
+.dataEntryBox {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+@media (max-width: 700px) {
+  .dataEntryBox {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
+
+
+@media (max-width:500px) {
+  .inputBox {
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .inputBox label {
+    width: 100%;
+  }
+
+  .selectInfo {
+    width: 100%;
+  }
+
+  .errorMsg {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width:375px) {
+  .pagination button {
+    margin: 0 2px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 11px;
+  }
+}
